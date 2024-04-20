@@ -1,0 +1,48 @@
+[workspace]
+members = [
+    "prefixes-f",
+    "prefixes-ms",
+    "prefixes-os",
+    "prefixes-p",
+    "prefixes-re",
+    "prefixes-s",
+    "prefixes-uppercase-os",
+    "prefixes-uppercase-p",
+    "prefixes-uppercase-re",
+]
+
+[workspace.dependencies]
+proc-macro2 = { version = "1.0.81", default-features = false }
+quote = { version = "1.0.36", default-features = false }
+syn = { version = "2.0.60", default-features = false, features = ["proc-macro", "parsing", "printing"] }
+
+[package]
+name = "prefixes"
+authors = ["Marcin Sas-Szymański <synek317@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
+license-file = "LICENSE"
+description = "Attribute-like macros imitating literal prefixes, e.g. #[f]\"Hello, {world}\""
+homepage = "https://github.com/synek317/prefixes"
+documentation = "https://docs.rs/prefixes"
+repository = "https://github.com/synek317/prefixes"
+readme = "README.md"
+keywords = ["prefix", "attribute", "format", "formatted", "string"]
+
+[dependencies]
+prefixes-f = { version = "0.1.0", path = "prefixes-f" }
+prefixes-ms = { version = "0.1.0", path = "prefixes-ms" }
+prefixes-os = { version = "0.1.0", path = "prefixes-os" }
+prefixes-p = { version = "0.1.0", path = "prefixes-p" }
+prefixes-re = { version = "0.1.0", path = "prefixes-re" }
+prefixes-s = { version = "0.1.0", path = "prefixes-s" }
+prefixes-uppercase-os = { version = "0.1.0", path = "prefixes-uppercase-os" }
+prefixes-uppercase-p = { version = "0.1.0", path = "prefixes-uppercase-p" }
+prefixes-uppercase-re = { version = "0.1.0", path = "prefixes-uppercase-re" }
+
+[dev-dependencies]
+regex = "1"

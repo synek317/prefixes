@@ -1,0 +1,24 @@
+[package]
+name = "prefixes-p"
+authors = ["Marcin Sas-Szymański <synek317@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
+license-file = "LICENSE"
+description = "Attribute-like macro for creating `Path`s easily. Part of the 'prefixes' suite."
+homepage = "https://github.com/synek317/prefixes"
+documentation = "https://docs.rs/prefixes"
+repository = "https://github.com/synek317/prefixes"
+readme = "README.md"
+keywords = ["prefix", "attribute", "format", "formatted", "string"]
+
+[lib]
+path = "src/lib.rs"
+proc_macro = true
+
+[dependencies]
+syn = { workspace = true }
+quote = { workspace = true }
